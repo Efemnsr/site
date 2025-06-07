@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanzila | Yazılım Çözümleri</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0px); }
+}
+.float { animation: float 6s ease-in-out infinite; }
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2C3E50',
+secondary: '#F1C40F'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-[#1a1a1a] text-white">
+<nav class="fixed top-0 w-full bg-[rgba(26,26,26,0.9)] backdrop-blur-md z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-secondary">Kanzila</a>
+</div>
+<div class="hidden md:block">
+<div class="flex items-center space-x-8">
+<a href="#hizmetler" class="hover:text-secondary transition-colors">Hizmetler</a>
+<button class="bg-secondary text-[#1a1a1a] px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all"><a href="#iletisim" class="hover:text-secondary transition-colors">Teklif Al</a></button>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<header class="pt-16 min-h-screen flex items-center relative overflow-hidden" style="background-image: linear-gradient(to right, rgba(26,26,26,1) 30%, rgba(26,26,26,0.7)), url('https://readdy.ai/api/search-image?query=modern%20tech%20office%20interior%20with%20futuristic%20elements%2C%20dark%20atmosphere%20with%20golden%20accents%2C%20minimalist%20design%2C%20high-end%20technology%20workspace%2C%20dramatic%20lighting%2C%20professional%20photography%20style&width=1920&height=1080&seq=1&orientation=landscape')">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h1 class="text-5xl font-bold leading-tight">
+<span class="text-secondary">Geleceğin</span> Teknolojisini<br>
+Bugünden İnşa Ediyoruz
+</h1>
+<p class="text-xl text-gray-300">Web'den mobile, oyundan yapay zekaya - dijital dünyanın her alanında yenilikçi çözümler üretiyoruz.</p>
+<div class="flex flex-wrap gap-4">
+<button class="border-2 border-secondary text-secondary px-8 py-3 !rounded-button hover:bg-secondary hover:text-[#1a1a1a] transition-all text-lg font-medium"><a href="#iletisim" class="hover:text-secondary transition-colors">Bize Ulaşın</a></button>
+
+</div>
+</div>
+<div class="hidden lg:block float">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="bg-[rgba(241,196,15,0.1)] p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full mb-4">
+<i class="ri-code-line text-[#1a1a1a] text-xl"></i>
+</div>
+<h3 class="text-lg font-medium mb-2">Web Geliştirme</h3>
+<p class="text-sm text-gray-400">Modern ve responsive web uygulamaları</p>
+</div>
+<div class="bg-[rgba(241,196,15,0.1)] p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full mb-4">
+<i class="ri-gamepad-line text-[#1a1a1a] text-xl"></i>
+</div>
+<h3 class="text-lg font-medium mb-2">Oyun Geliştirme</h3>
+<p class="text-sm text-gray-400">Etkileyici mobil ve PC oyunları</p>
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="bg-[rgba(241,196,15,0.1)] p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full mb-4">
+<i class="ri-smartphone-line text-[#1a1a1a] text-xl"></i>
+</div>
+<h3 class="text-lg font-medium mb-2">Mobil Uygulama</h3>
+<p class="text-sm text-gray-400">iOS ve Android platformları için native uygulamalar</p>
+</div>
+<div class="bg-[rgba(241,196,15,0.1)] p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full mb-4">
+<i class="ri-ai-generate text-[#1a1a1a] text-xl"></i>
+</div>
+<h3 class="text-lg font-medium mb-2">Yapay Zeka</h3>
+<p class="text-sm text-gray-400">AI destekli akıllı çözümler</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section id="istatistikler" class="py-24 bg-[#1a1a1a]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center p-8 bg-[rgba(241,196,15,0.1)] rounded-lg">
+<div class="text-4xl font-bold text-secondary mb-2">150+</div>
+<div class="text-gray-400">Tamamlanan Proje</div>
+</div>
+<div class="text-center p-8 bg-[rgba(241,196,15,0.1)] rounded-lg">
+<div class="text-4xl font-bold text-secondary mb-2">50+</div>
+<div class="text-gray-400">Mutlu Müşteri</div>
+</div>
+<div class="text-center p-8 bg-[rgba(241,196,15,0.1)] rounded-lg">
+<div class="text-4xl font-bold text-secondary mb-2">15+</div>
+<div class="text-gray-400">Uzman Ekip</div>
+</div>
+<div class="text-center p-8 bg-[rgba(241,196,15,0.1)] rounded-lg">
+<div class="text-4xl font-bold text-secondary mb-2">5+</div>
+<div class="text-gray-400">Yıllık Deneyim</div>
+</div>
+</div>
+</div>
+</section>
+<section id="hizmetler" class="py-24 bg-[#1a1a1a]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Hizmetlerimiz</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Dijital dönüşüm yolculuğunuzda ihtiyacınız olan tüm teknoloji çözümlerini sunuyoruz.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="p-8 bg-[rgba(241,196,15,0.1)] rounded-lg hover:transform hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-secondary rounded-full mb-6">
+<i class="ri-code-line text-[#1a1a1a] text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Web Geliştirme</h3>
+<ul class="space-y-2 text-gray-400">
+<li>• Kurumsal Web Siteleri</li>
+<li>• E-ticaret Platformları</li>
+<li>• Web Uygulamaları</li>
+<li>• API Entegrasyonları</li>
+</ul>
+</div>
+<div class="p-8 bg-[rgba(241,196,15,0.1)] rounded-lg hover:transform hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-secondary rounded-full mb-6">
+<i class="ri-smartphone-line text-[#1a1a1a] text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Mobil Uygulama</h3>
+<ul class="space-y-2 text-gray-400">
+<li>• iOS Uygulamaları</li>
+<li>• Android Uygulamaları</li>
+<li>• Cross-platform Çözümler</li>
+<li>• Mobil Oyunlar</li>
+</ul>
+</div>
+<div class="p-8 bg-[rgba(241,196,15,0.1)] rounded-lg hover:transform hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 flex items-center justify-center bg-secondary rounded-full mb-6">
+<i class="ri-gamepad-line text-[#1a1a1a] text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Oyun Geliştirme</h3>
+<ul class="space-y-2 text-gray-400">
+<li>• 2D/3D Oyunlar</li>
+<li>• Unity Geliştirme</li>
+<li>• Unreal Engine</li>
+<li>• AR/VR Deneyimleri</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="iletisim" class="py-24 bg-[#1a1a1a]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<h2 class="text-4xl font-bold mb-8">İletişime Geçin</h2>
+<p class="text-gray-400 mb-8">Projeniz için bizimle iletişime geçin. Size en uygun çözümü sunalım.</p>
+<div class="space-y-6">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full">
+<i class="ri-map-pin-line text-[#1a1a1a] text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">Adres</h3>
+<p class="text-gray-400">Hatay, Türkiye</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-full">
+<i class="ri-mail-line text-[#1a1a1a] text-xl"></i>
+</div>
+<div>
+<h3 class="font-semibold">E-posta</h3>
+<p class="text-gray-400">efemansur0@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium mb-2">Ad Soyad</label>
+<input type="text" class="w-full px-4 py-3 bg-[rgba(241,196,15,0.1)] border-none rounded-lg text-white" placeholder="Adınız Soyadınız">
+</div>
+<div>
+<label class="block text-sm font-medium mb-2">E-posta</label>
+<input type="email" class="w-full px-4 py-3 bg-[rgba(241,196,15,0.1)] border-none rounded-lg text-white" placeholder="ornek@email.com">
+</div>
+<div>
+<label class="block text-sm font-medium mb-2">Mesaj</label>
+<textarea class="w-full px-4 py-3 bg-[rgba(241,196,15,0.1)] border-none rounded-lg text-white h-32" placeholder="Mesajınız..."></textarea>
+</div>
+<button type="submit" class="w-full bg-secondary text-[#1a1a1a] py-3 !rounded-button hover:bg-opacity-90 transition-all font-medium">Gönder</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-[#1a1a1a] py-12 border-t border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-secondary mb-4 block">Kanzila</a>
+<p class="text-gray-400">Dijital dünyada mükemmelliği hedefleyen, yenilikçi ve güvenilir teknoloji çözümleri sunuyoruz.</p>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Hizmetler</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="#" class="hover:text-secondary">Web Geliştirme</a></li>
+<li><a href="#" class="hover:text-secondary">Mobil Uygulama</a></li>
+<li><a href="#" class="hover:text-secondary">Oyun Geliştirme</a></li>
+<li><a href="#" class="hover:text-secondary">UI/UX Tasarım</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Şirket</h3>
+<ul class="space-y-2 text-gray-400">
+<li><a href="#" class="hover:text-secondary">Hakkımızda</a></li>
+<li><a href="#" class="hover:text-secondary">Kariyer</a></li>
+<li><a href="#" class="hover:text-secondary">İletişim</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Sosyal Medya</h3>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/efedev0x" target="_blank" class="w-10 h-10 flex items-center justify-center bg-[rgba(241,196,15,0.1)] rounded-full hover:bg-secondary transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="mailto:efemansur0@gmail.com" class="w-10 h-10 flex items-center justify-center bg-[rgba(241,196,15,0.1)] rounded-full hover:bg-secondary transition-colors">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+<p>&copy; 2025 Kanzila. Tüm hakları saklıdır.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const header = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 0) {
+header.classList.add('shadow-lg');
+} else {
+header.classList.remove('shadow-lg');
+}
+});
+});
+</script>
+</body>
+</body>
+</html>
